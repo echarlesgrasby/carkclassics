@@ -35,7 +35,7 @@ _These are listed in no particular order or requirement, just some suggestions t
 4. History of the Peloponnesian War, Thucydides. *History.*
 5. Histories, Herodotus. *History.*
 6. Any of the principal Upaniṣads (e.g. The Katha Upaniṣad). *Indian classic.*
-7. The Heart of Dōgen's Shōbōgenzō, Dōgen. *Japanese Zen classi.*
+7. The Heart of Dōgen's Shōbōgenzō, Dōgen. *Japanese Zen classic.*
 8. The Narrow Road to the Deep North (Oku no Hosomichi), Matsuo Bashō. *Japanese classic.*
 
 -----------------------------------
