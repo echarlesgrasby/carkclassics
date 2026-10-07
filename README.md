@@ -42,7 +42,7 @@ _These are listed in no particular order or requirement, just some suggestions t
 
 
 > [!NOTE]
-> This discussion framework is heavily inspired and influenced by the wonderful programs at both [St. John's College](https://sjc.edu/) and the [Great Books Foundation](https://www.greatbooks.org/nonprofit-organization/). The Central Arkansas Classics Society, however, is an informal discussion group and is not affiliated by any of these organizations.
+> This discussion framework is heavily inspired and influenced by the wonderful programs at both [St. John's College](https://sjc.edu/) and the [Great Books Foundation](https://www.greatbooks.org/nonprofit-organization/). The Central Arkansas Classics Society, however, is an informal discussion group and is not affiliated with any of these organizations.
 
 -----------------------------------
 **Founding Members**: Eric C. Grasby
