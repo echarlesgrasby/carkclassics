@@ -23,4 +23,27 @@
 10. Remember that classics are meant to be savored!
 -----------------------------------
 
+
+
+## Suggested Reading Items
+
+_These are listed in no particular order or requirement, just some suggestions to include:_
+
+1. The Analects, Confucius. *Chinese classic.*
+2. Book One of the Iliad, Homer. *Philosophy/Theology (good foundational text).*
+3. The Republic, Plato. *Politics and Society.*
+4. History of the Peloponnesian War, Thucydides. *History.*
+5. Histories, Herodotus. *History.*
+6. Any of the principal Upaniṣads (e.g. The Katha Upaniṣad). *Indian classic.*
+7. The Heart of Dōgen's Shōbōgenzō, Dōgen. *Japanese Zen classi.*
+8. The Narrow Road to the Deep North (Oku no Hosomichi), Matsuo Bashō. *Japanese classic.*
+-----------------------------------
+
+
+
+> [!NOTE]
+> This discussion framework is heavily inspired and influenced by the wonderful programs at both [St. John's College](https://sjc.edu/) and the [Great Books Foundation](https://www.greatbooks.org/nonprofit-organization/). The Central Arkansas Classics Society, however, is an informal discussion group and is not affiliated by any of these organizations.
+
+
+-----------------------------------
 **Founding Members**: Eric C. Grasby
