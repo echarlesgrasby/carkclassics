@@ -21,8 +21,8 @@
 8. Avoid “lecturing” each other. We should share our thoughts, but we should also remember that we are in a session to learn and ponder the texts. A way to avoid this is to ask questions that we genuinely do not already know the answer(s) to.
 9. Accept that there are questions for which we may not arrive at a definite answer (and let’s embrace that!)
 10. Remember that classics are meant to be savored!
------------------------------------
 
+-----------------------------------
 
 
 ## Suggested Reading Items
@@ -37,13 +37,12 @@ _These are listed in no particular order or requirement, just some suggestions t
 6. Any of the principal Upaniṣads (e.g. The Katha Upaniṣad). *Indian classic.*
 7. The Heart of Dōgen's Shōbōgenzō, Dōgen. *Japanese Zen classi.*
 8. The Narrow Road to the Deep North (Oku no Hosomichi), Matsuo Bashō. *Japanese classic.*
------------------------------------
 
+-----------------------------------
 
 
 > [!NOTE]
 > This discussion framework is heavily inspired and influenced by the wonderful programs at both [St. John's College](https://sjc.edu/) and the [Great Books Foundation](https://www.greatbooks.org/nonprofit-organization/). The Central Arkansas Classics Society, however, is an informal discussion group and is not affiliated by any of these organizations.
-
 
 -----------------------------------
 **Founding Members**: Eric C. Grasby
