@@ -1,0 +1,43 @@
+{% extends "seminar/base.html" %}
+{% block title %}{{ session.cycle.text.title }}, {{ session.passage }} | Minutes{% endblock %}
+
+{% block content %}
+<article>
+  <p class="muted" style="margin-top:2rem">{{ session.cycle.title }}, session {{ session.number }}</p>
+  <h1 style="margin-top:.25rem">{{ session.passage }}</h1>
+  <p class="muted">
+    <time datetime="{{ session.date|date:'c' }}">{{ session.date|date:"F j, Y" }}</time>,
+    {{ session.venue }}{% if session.headcount %}, {{ session.headcount }} reader{{ session.headcount|pluralize }}{% endif %}
+  </p>
+
+  {% if session.opening_question %}
+  <h2>The opening question</h2>
+  <blockquote>{{ session.opening_question|linebreaksbr }}</blockquote>
+  {% endif %}
+
+  {% if session.summary %}
+  <h2>The discussion</h2>
+  {{ session.summary|linebreaks }}
+  {% endif %}
+
+  {% if session.unresolved_list %}
+  <h2>Still unresolved</h2>
+  <ul>{% for q in session.unresolved_list %}<li>{{ q }}</li>{% endfor %}</ul>
+  {% endif %}
+
+  {% if session.facilitator_note %}
+  <h2>Facilitator's note</h2>
+  {{ session.facilitator_note|linebreaks }}
+  {% endif %}
+
+  {% if session.assignment_for_next %}
+  <h2>For next time</h2>
+  <p>{{ session.assignment_for_next }}</p>
+  {% endif %}
+</article>
+
+<nav aria-label="Sessions" style="display:flex; justify-content:space-between; margin-top:3rem; gap:1rem">
+  <span>{% if previous %}<a href="{{ previous.get_absolute_url }}" rel="prev">Session {{ previous.number }}: {{ previous.passage }}</a>{% endif %}</span>
+  <span style="text-align:right">{% if following %}<a href="{{ following.get_absolute_url }}" rel="next">Session {{ following.number }}: {{ following.passage }}</a>{% endif %}</span>
+</nav>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "seminar/base.html" %}
+{% block title %}Minutes | Little Rock Eastern Classics Seminar{% endblock %}
+
+{% block content %}
+<h1>Minutes</h1>
+<p>An anonymous account of each session: what we read, what we asked, and what stayed unresolved.</p>
+
+{% regroup sessions by cycle as cycle_list %}
+{% for group in cycle_list %}
+  <h2>{{ group.grouper.title }}</h2>
+  <ul>
+    {% for s in group.list %}
+    <li><a href="{{ s.get_absolute_url }}">Session {{ s.number }}: {{ s.passage }}</a>
+      <span class="muted">{{ s.date|date:"M j, Y" }}</span></li>
+    {% endfor %}
+  </ul>
+{% empty %}
+  <p>No minutes yet. They appear here after each session.</p>
+{% endfor %}
+{% endblock %}

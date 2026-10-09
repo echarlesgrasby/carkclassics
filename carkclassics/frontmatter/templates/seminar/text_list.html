@@ -1,0 +1,35 @@
+{% extends "seminar/base.html" %}
+{% block title %}Readings | Little Rock Eastern Classics Seminar{% endblock %}
+
+{% block content %}
+<h1>Readings</h1>
+<p>Texts the group has read or may read, with the translations we recommend and why. Translation changes what a passage says, so we choose one edition per cycle.</p>
+
+{% for text in texts %}
+<section id="{{ text.slug }}" aria-labelledby="{{ text.slug }}-title">
+  <h2 id="{{ text.slug }}-title">{{ text.title }}</h2>
+  <p class="muted">{% if text.author %}{{ text.author }}{% endif %}{% if text.tradition %}{% if text.author %}; {% endif %}{{ text.tradition }}{% endif %}</p>
+  <p>{{ text.summary }}</p>
+  {% if text.suggested_pace %}<p><strong>Suggested pace:</strong> {{ text.suggested_pace }}</p>{% endif %}
+
+  <h3>Editions</h3>
+  {% for e in text.editions.all %}
+  <div class="edition">
+    {% if e.cover %}<img src="{{ e.cover.url }}" alt="{{ e.cover_alt|default:e.translator }}" loading="lazy">{% endif %}
+    <div class="body">
+      {% if e.is_group_edition %}<p class="group-pick">The group's edition</p>{% endif %}
+      <p><strong>Translated by {{ e.translator }}</strong>{% if e.publisher %}, {{ e.publisher }}{% endif %}{% if e.year %}, {{ e.year }}{% endif %}</p>
+      {% if e.isbn %}<p class="muted">ISBN {{ e.isbn }}</p>{% endif %}
+      {% if e.public_domain %}<p class="muted">Public domain: free to read online.</p>{% endif %}
+      {% if e.notes %}<p>{{ e.notes }}</p>{% endif %}
+      {% if e.link %}<p><a href="{{ e.link }}">More about this edition</a></p>{% endif %}
+    </div>
+  </div>
+  {% empty %}
+  <p class="muted">Editions to be decided.</p>
+  {% endfor %}
+</section>
+{% empty %}
+<p>No readings listed yet.</p>
+{% endfor %}
+{% endblock %}

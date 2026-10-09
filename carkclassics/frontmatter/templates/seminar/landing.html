@@ -1,0 +1,55 @@
+{% extends "seminar/base.html" %}
+
+{% block content %}
+<h1>Read the Eastern classics, slowly, with other people.</h1>
+<p>A free reading group that meets every other Thursday in Little Rock. We read one short text closely and talk about what is actually on the page. No background is needed. You only need to read the assignment.</p>
+
+{% if next_session %}
+<section class="next" aria-labelledby="next-heading">
+  <h2 id="next-heading" style="margin-top:0">Next meeting</h2>
+  <p class="when"><time datetime="{{ next_session.date|date:'c' }}">{{ next_session.date|date:"l, F j" }} at {{ next_session.date|time:"g:i A" }}</time></p>
+  <p>{{ next_session.venue }}{% if next_session.venue_address %}, {{ next_session.venue_address }}{% endif %}</p>
+  <p><strong>Read for this session:</strong> {{ next_session.passage }}</p>
+</section>
+{% else %}
+<section class="next">
+  <p class="when">The next cycle has not been scheduled yet.</p>
+  {% if contact_email %}<p><a href="mailto:{{ contact_email }}">Email to hear when it starts.</a></p>{% endif %}
+</section>
+{% endif %}
+
+<h2>What to expect</h2>
+<p>Sessions run 90 minutes. Someone reads a short passage aloud, then we spend about an hour on one question and follow where the text leads. We end with the questions we have not resolved. Nobody lectures, and the facilitator is a fellow reader.</p>
+
+{% if current_cycle %}
+<h2>Current reading</h2>
+<p><a href="{% url 'seminar:texts' %}#{{ current_cycle.text.slug }}">{{ current_cycle.text.title }}</a>{% if current_cycle.text.author %}, {{ current_cycle.text.author }}{% endif %}. Please bring the same edition as the group if you can, since we refer to passages by page. Library copies are fine.</p>
+{% endif %}
+
+<h2>How we talk</h2>
+<ul>
+  <li>Stay with the text. "Where do you see that?" is always a fair question.</li>
+  <li>Listen fully before responding.</li>
+  <li>Disagreement is welcome. Everyone gets a turn.</li>
+</ul>
+
+<h2>Practical details</h2>
+<ul>
+  <li><strong>Cost:</strong> free.</li>
+  <li><strong>Access:</strong> add parking and step-free entrance details for your venue here.</li>
+  <li><strong>Joining:</strong> {% if contact_email %}email <a href="mailto:{{ contact_email }}">{{ contact_email }}</a> or just show up.{% else %}just show up.{% endif %}</li>
+</ul>
+
+<h2>Who runs this</h2>
+<p>Eric Grasby, a software developer and doctoral student who is starting this group to read these books with neighbors. It is a community reading group, not a class, and no one here is the expert.</p>
+
+{% if recent_sessions %}
+<h2>Recent minutes</h2>
+<ul>
+  {% for s in recent_sessions %}
+  <li><a href="{{ s.get_absolute_url }}">{{ s.cycle.text.title }}: {{ s.passage }}</a> <span class="muted">({{ s.date|date:"M j, Y" }})</span></li>
+  {% endfor %}
+</ul>
+<p><a href="{% url 'seminar:sessions' %}">All minutes</a></p>
+{% endif %}
+{% endblock %}
